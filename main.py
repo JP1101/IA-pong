@@ -77,28 +77,40 @@ if __name__ == "__main__":
 
 
 
+#WEIGHTS
+
+
+w = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+
+#BIAS
+b = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 
 #NEURONES
 
 #input:
-BallX = my_ball.x
-BallY = my_ball.y
-BallDirection = Functions.CalcA(my_ball.dir_x, my_ball.dir_y)
-BallVelocity = fps
-PlayerX = p2.x
-PlayerY  = p2.y
-PlayerHeight = p2.height
+n1 = my_ball.x #Ball x
+n2 = my_ball.y #Ball y
+n3 = Functions.CalcA(my_ball.dir_x, my_ball.dir_y) #Ball direction
+n4 = fps #Ball Velocity
+n5 = p2.x #Player x
+n6 = p2.y #Player y 
+n7 = p2.height #Player Height
 
 
-Input = [BallX, BallY, BallDirection, BallVelocity, PlayerX, PlayerY, PlayerHeight]
+
+
+Input = [n1, n2, n3, n4, n5, n6, n7]
+
+
 
 #hiddenLayer
 
-n9
-n10
-n11
-n12
-n13
+n9 = Functions.CalcNeurone(n1, w[1], n2, w[2], n3, w[3], b[1])
+n10 = Functions.CalcNeurone(n2, w[2], n3, w[3], n4, w[4], b[2])
+n11 = Functions.CalcNeurone(n3, w[3], n4, w[4], n5, w[5], b[3])
+n12 = Functions.CalcNeurone(n4, w[4], n5, w[5], n6, w[6], b[4])
+n13 = Functions.CalcNeurone()
 n14
 n15
 n16
@@ -114,5 +126,3 @@ Down
 stay
 
 OutPut = [Up, Down ,stay]
-
-
