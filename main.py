@@ -106,15 +106,17 @@ Input = [n1, n2, n3, n4, n5, n6, n7]
 
 #hiddenLayer
 
+
 n9 = Functions.CalcNeurone(n1, w[1], n2, w[2], n3, w[3], b[1])
 n10 = Functions.CalcNeurone(n2, w[2], n3, w[3], n4, w[4], b[2])
 n11 = Functions.CalcNeurone(n3, w[3], n4, w[4], n5, w[5], b[3])
 n12 = Functions.CalcNeurone(n4, w[4], n5, w[5], n6, w[6], b[4])
-n13 = Functions.CalcNeurone()
-n14
-n15
-n16
-n17
+n13 = Functions.CalcNeurone(n5, w[5], n6, w[6], n7, w[7], b[5])
+n14 = Functions.CalcNeurone(n6, w[6], n7, w[7], n1, w[8], b[6])
+n15 = Functions.CalcNeurone(n7, w[7], n1, w[8], n2, w[9], b[7])
+n16 = Functions.CalcNeurone(n1, w[8], n2, w[9], n3, w[10], b[8])
+n17 = Functions.CalcNeurone(n2, w[9], n3, w[10], n4, w[11], b[9])
+
 
 HiddenLayer = [n9, n10, n11, n12, n13, n14, n15, n16, n17]
 
